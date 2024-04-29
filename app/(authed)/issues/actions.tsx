@@ -7,8 +7,8 @@ export async function queryServerAction() {
 	return `query server action response: ${new Date().toISOString()}`;
 }
 
-export async function mutationServerAction(input: string) {
-	console.log("logging: mutationServerAction", input);
+export async function mutationServerAction([input, duput]: [string, string?]) {
+	console.log("logging: mutationServerAction", input, duput);
 	revalidatePath("/");
 	return `mutation server action response: ${input}`;
 }

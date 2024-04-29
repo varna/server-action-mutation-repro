@@ -23,7 +23,7 @@ export default function MyButton() {
 			<button
 				type="button"
 				onClick={async () => {
-					const response = await mutationServerAction(arg);
+					const response = await mutationServerAction([arg, arg]);
 					setRes(response);
 				}}
 			>
